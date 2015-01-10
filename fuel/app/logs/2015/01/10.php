@@ -233,3 +233,37 @@ WARNING - 2015-01-10 21:57:24 --> Fuel\Core\Fuel::init - The configured locale e
 WARNING - 2015-01-10 21:57:40 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
 WARNING - 2015-01-10 21:59:20 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
 WARNING - 2015-01-10 21:59:29 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2015-01-10 22:23:55 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2015-01-10 22:23:58 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+ERROR - 2015-01-10 22:23:58 --> Fatal Error - Class 'ExchangeRateProvider' not found in /home/wojtek/WOJTEK_PRACA/fuel_test_esky/fueltest/fuel/app/classes/controller/main.php on line 54
+WARNING - 2015-01-10 22:24:44 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+ERROR - 2015-01-10 22:24:44 --> Error - No result was found for query although at least one row was expected. in /home/wojtek/WOJTEK_PRACA/fuel_test_esky/fueltest/fuel/vendor/doctrine/orm/lib/Doctrine/ORM/AbstractQuery.php on line 807
+WARNING - 2015-01-10 22:25:26 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+ERROR - 2015-01-10 22:25:26 --> Error - No result was found for query although at least one row was expected. in /home/wojtek/WOJTEK_PRACA/fuel_test_esky/fueltest/fuel/vendor/doctrine/orm/lib/Doctrine/ORM/AbstractQuery.php on line 807
+WARNING - 2015-01-10 22:26:23 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+ERROR - 2015-01-10 22:26:23 --> Error - No result was found for query although at least one row was expected. in /home/wojtek/WOJTEK_PRACA/fuel_test_esky/fueltest/fuel/vendor/doctrine/orm/lib/Doctrine/ORM/AbstractQuery.php on line 807
+WARNING - 2015-01-10 22:27:38 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+ERROR - 2015-01-10 22:27:39 --> Fatal Error - Class 'Fuel\App\Classes\Exception' not found in /home/wojtek/WOJTEK_PRACA/fuel_test_esky/fueltest/fuel/app/classes/ExchangeRateProvider.php on line 27
+WARNING - 2015-01-10 22:27:55 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+ERROR - 2015-01-10 22:27:55 --> Fatal Error - Class 'Fuel\App\Classes\Exception' not found in /home/wojtek/WOJTEK_PRACA/fuel_test_esky/fueltest/fuel/app/classes/ExchangeRateProvider.php on line 27
+WARNING - 2015-01-10 22:28:04 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2015-01-10 22:28:13 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+ERROR - 2015-01-10 22:28:13 --> Fatal Error - Call to undefined function Fuel\App\Classes\setMaxResults() in /home/wojtek/WOJTEK_PRACA/fuel_test_esky/fueltest/fuel/app/classes/ExchangeRateProvider.php on line 45
+WARNING - 2015-01-10 22:28:45 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+ERROR - 2015-01-10 22:28:46 --> Fatal Error - Call to a member function getCurrencyFrom() on a non-object in /home/wojtek/WOJTEK_PRACA/fuel_test_esky/fueltest/fuel/app/classes/controller/main.php on line 59
+WARNING - 2015-01-10 22:29:10 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2015-01-10 22:29:21 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+ERROR - 2015-01-10 22:29:21 --> Fatal Error - Call to a member function getCurrencyFrom() on a non-object in /home/wojtek/WOJTEK_PRACA/fuel_test_esky/fueltest/fuel/app/classes/controller/main.php on line 60
+WARNING - 2015-01-10 22:30:10 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+ERROR - 2015-01-10 22:30:10 --> Fatal Error - Call to a member function getCurrencyFrom() on a non-object in /home/wojtek/WOJTEK_PRACA/fuel_test_esky/fueltest/fuel/app/classes/controller/main.php on line 61
+WARNING - 2015-01-10 22:30:36 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2015-01-10 22:30:46 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2015-01-10 22:30:51 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2015-01-10 22:32:02 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2015-01-10 22:32:32 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2015-01-10 22:32:49 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2015-01-10 22:33:05 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2015-01-10 22:33:11 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2015-01-10 22:33:40 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2015-01-10 22:33:44 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.
+WARNING - 2015-01-10 22:33:51 --> Fuel\Core\Fuel::init - The configured locale en_US is not installed on your system.

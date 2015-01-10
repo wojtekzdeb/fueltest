@@ -1,5 +1,7 @@
 <?php
 
+namespace Fuel\App\Classes;
+
 /**
  * ExchangeRateProvider, responsible for providing exchange rates
  *
@@ -22,7 +24,7 @@ class ExchangeRateProvider {
         if (!isset($jsonResult->err)) {
             return $jsonResult;
         } else {
-            throw new Exception("Couldn't find rate from $currencyFrom to $currencyTo");
+            throw new \Exception("Couldn't find rate from $currencyFrom to $currencyTo");
         }
     }
 
@@ -33,18 +35,22 @@ class ExchangeRateProvider {
      * @return float $avg
      */
     public static function getAverageRateForCurrencies($currencyFrom, $currencyTo) {
-        $retVal = 0.00;
         $em = \Fuel\Doctrine::manager();
-        $query = $em->createQuery("
-          SELECT avg(c.rate) as avg
-          Model_ExchangeLog     c
-          WHERE c.currencyFrom = :currency_from AND c.currencyTo = :currency_to")
-                ->setPArameter('currency_from', $currencyFrom)
-                ->setPArameter('currency_to', $currencyTo);
+        try {
+            $query = $em->createQuery("
+              SELECT avg(c.rate) as avg
+              Model_ExchangeLog     c
+              WHERE c.currencyFrom = :currency_from AND c.currencyTo = :currency_to")
+                    ->setPArameter('currency_from', $currencyFrom)
+                    ->setPArameter('currency_to', $currencyTo)
+                    ->setMaxResults(1);
 
-        $avg = $query->getSingleResult();
-        if (!empty($avg)) {
-            $retVal = $avg[1];
+            $avg = $query->getResult();
+            if (!empty($avg)) {
+                $retVal = $avg[0][1];
+            }
+        } catch (\Exception $e) {
+            $retVal = 0.00;
         }
         return $retVal;
     }
@@ -71,9 +77,9 @@ class ExchangeRateProvider {
                     ->setParameter(4, $currencyTo)
                     ->setMaxResults(1);
             $query = $qb->getQuery();
-            $storedExchangeRate = $query->getSingleResult();
-            return $storedExchangeRate;
-        } catch (Exception $e) {
+            $storedExchangeRate = $query->getResult();
+            return $storedExchangeRate[0];
+        } catch (\Exception $e) {
             return NULL;
         }
     }

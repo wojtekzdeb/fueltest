@@ -4,7 +4,7 @@ require COREPATH.'bootstrap.php';
 
 
 Autoloader::add_classes(array(
-	'ExchangeRateProvider' => APPPATH.'classes/ExchangeRateProvider.php',
+	'Fuel\App\Classes\ExchangeRateProvider' => APPPATH.'classes/ExchangeRateProvider.php',
 ));
 
 // Register the autoloader

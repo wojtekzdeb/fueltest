@@ -1,5 +1,7 @@
 <?php
 
+use Fuel\App\Classes as myClasses;
+
 class Controller_Main extends Controller_Template {
 
     /**
@@ -51,13 +53,14 @@ class Controller_Main extends Controller_Template {
      * @param array $input
      */
     private function processInputData(array $input) {
-        $storedExchangeRate = ExchangeRateProvider::getStoredExchangeRate($input['currency_from'], $input['currency_to']);
+        $storedExchangeRate = myClasses\ExchangeRateProvider::getStoredExchangeRate($input['currency_from'], $input['currency_to']);
         if (!empty($storedExchangeRate)) {
-            $avg = ExchangeRateProvider::getAverageRateForCurrencies($input['currency_from'], $input['currency_to']);
+            $avg = myClasses\ExchangeRateProvider::getAverageRateForCurrencies($input['currency_from'], $input['currency_to']);
             $this->addRateToTemplate($storedExchangeRate->getCurrencyFrom(), $storedExchangeRate->getCurrencyTo(), $storedExchangeRate->getRate(), $avg);
         } else {
             try {
-                $exchangeRate = ExchangeRateProvider::getRate($input['currency_from'], $input['currency_to']);
+                $exchangeRate = myClasses\ExchangeRateProvider::getRate($input['currency_from'], $input['currency_to']);
+                var_dump('TEST2', $exchangeRate);
                 $this->storeExchangeRate($exchangeRate);
                 $this->addRateToTemplate($exchangeRate->from, $exchangeRate->to, $exchangeRate->rate, $exchangeRate->rate);
             } catch (Exception $e) {
