@@ -6,9 +6,9 @@
 return array(
 	'default' => array(
 		'connection'  => array(
-			'dsn'        => 'mysql:host=localhost;dbname=avs_system',
-			'username'   => 'http',
-			'password'   => '',
+			'dsn'        => 'mysql:host=localhost;dbname=fueltest',
+			'username'   => 'fueltest',
+			'password'   => 'fueltest',
 		),
 	),
 );
